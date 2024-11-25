@@ -1,0 +1,510 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffff;
+    color: #4a4a4a;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    padding-bottom: 30px;
+    z-index: 1000;
+    position: fixed;
+}
+
+
+.home-position {
+    padding-bottom: 62px;
+    padding-top: 65px;
+    padding-right: 20px;
+    position: absolute;
+    right: 45px;
+}
+
+.home-button {
+    display: inline-block;
+    background: #343a40;
+    backdrop-filter: blur(10px);
+    border: 1px solid #f4f4f4;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Home Button Hover Effect */
+.home-button:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(10px);
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Home Button Active State (Click) */
+.home-button:active {
+    transform: scale(0.95);
+}
+
+.home-button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 60px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    letter-spacing: 0.1cap;
+}
+
+.logo {
+    padding-bottom: 50px;
+    position: absolute;
+    left: 45px;
+    padding-top: 65px;
+}
+
+.logo1 {
+    position: absolute;
+    left: 20px;
+    padding-top: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.nav-links a:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(100px);
+    border-radius: 12px;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+.nav-links:active {
+    transform: scale(0.95);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 20Fpx;
+    right: 30px;
+}
+
+.hamburger span {
+    background: white;
+    border-radius: 20px;
+    margin: 3px;
+    transition: 0.4s;
+    width: 30px;
+    height: 4px;
+
+}
+
+/* Responsive Design: show hamburger when the screen is small */
+@media (max-width: 820px) {
+    nav {
+        padding: 10px 15px;
+        /* ลด padding เมื่อจอเล็กลง */
+    }
+
+    .nav-links {
+        display: none;
+        /* ซ่อนเมนู links */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        flex-direction: column;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 40px 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* แสดงเมนูเมื่อคลิก hamburger */
+    }
+
+    .hamburger {
+        display: flex;
+        /* แสดง hamburger เมื่อลดขนาดหน้าจอ */
+    }
+
+    .home-position {
+        display: none;
+    }
+}
+
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active li {
+    margin: 20px 0;
+}
+
+
+
+/* Banner Section */
+.banner {
+    margin-top: 60px;
+    /* Space for fixed navbar */
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.header-text {
+    background-color: #ffffff;
+    color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+/* จัดการ container ทั้งหมด */
+.hero-section {
+    background-color: #ffffff;
+    /* สีพื้นหลัง */
+    color: #2e2e2e;
+    /* สีข้อความ */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* จัดกล่องเนื้อหาให้แยกเป็น text และ image */
+.content {
+    display: flex;
+    flex-direction: column;
+    /* เปลี่ยนเป็นแถวเมื่อหน้าจอเล็ก */
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        /* เปลี่ยนเป็นแนวนอนเมื่อหน้าจอใหญ่ */
+        justify-content: space-between;
+    }
+}
+
+/* สไตล์ข้อความ */
+.text {
+    flex: 1;
+    max-width: 600px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.text h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.text p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.contact_button {
+    background-color: #fff;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียงในแนวตั้ง */
+    align-items: flex-start;
+    /* จัดตำแหน่งเริ่มต้นจากซ้าย */
+    gap: 10px;
+    /* ระยะห่างระหว่าง <p> และปุ่ม */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 20px rgba(58, 58, 58, 0.3);
+}
+
+.contact_button1 {
+    background-color: #fff;
+    width: 175px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียงในแนวตั้ง */
+    align-items: center;
+    /* จัดตำแหน่งเริ่มต้นจากซ้าย */
+    gap: 10px;
+    /* ระยะห่างระหว่าง <p> และปุ่ม */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 20px rgba(58, 58, 58, 0.3);
+}
+
+.contact_button img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact_button p {
+    font-size: 1rem;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.contact_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact_button1 p {
+    font-size: 1rem;
+    align-items: center;
+    padding-top: 10px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.contact_button1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.my-link {
+    text-decoration: none;
+    /* เอาเส้นขีดใต้ลิงก์ออก */
+    color: #2e2e2e;
+}
+
+/* สไตล์รูปภาพ */
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+/* General styles for the section */
+.section {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Glass-box effect for the container */
+.glass-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* Grid layout for the project items */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Individual project item styling */
+.project-item {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside project items */
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Project description text */
+.project-item p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 10px;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Skills Section */
+.skills {
+    padding: 40px;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.skill-bar {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.skill-bar p {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.bar {
+    background: #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #7f56d9;
+    width: 0;
+    animation: load 2s forwards;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: inherit;
+    }
+}
